@@ -3,14 +3,16 @@
 ## Descrição
 Solução escrita em script shell para backup em site remoto da MediaWiki.
 
-A execução é baseada em executada em dois momentos:
+A execução em executada em dois momentos:
 
 1o. Criação de tarball com arquivos da aplicacao e dump.DB;
+
 2o. Sincronização do tarball em maquina remota;
 
 Importante:
 
-a. Para trasnferencias de arquivos sobre ssh é necessario garantir relacao de confianca baseada em troca de chaves RSA/DSA;
+a. Para transferencias de arquivos sobre ssh é necessario garantir relacao de confianca baseada em troca de chaves RSA/DSA;
+
 b. Para monitoramento da rotina atraves de email é necessario a configiração de algum smtp client (ex posftix);
 
 
