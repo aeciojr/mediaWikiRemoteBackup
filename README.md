@@ -1,19 +1,19 @@
 # MediaWiki - Remote backup
 
-## Descrição
-Solução escrita em script shell para backup em site remoto da MediaWiki.
+## Description
+Written solution in shell script for backup in MediaWiki remote site.
 
-A execução em executada em dois momentos:
+The execution is executed in two moments:
 
-1o. Criação de tarball com arquivos da aplicacao e dump.DB;
+1o. Creating tarball with application files and dump.DB;
 
-2o. Sincronização do tarball em maquina remota;
+2nd. Synchronization of the tarball in a remote machine;
 
-Importante:
+Important:
 
-a. Para transferencias de arquivos sobre ssh é necessario garantir relacao de confianca baseada em troca de chaves RSA/DSA;
+an. For file transfers over ssh it is necessary to ensure a trust relationship in exchange for RSA / DSA keys;
 
-b. Para monitoramento da rotina atraves de email é necessario a configiração de algum smtp client (ex posftix);
+B. To monitor the routine through email, it is necessary a client to configure some smtp (ex posftix);
 
 
 ```
@@ -37,22 +37,22 @@ b. Para monitoramento da rotina atraves de email é necessario a configiração 
    d. Envia email;               +                # --- Fim --- #             +
 
 ```
-## Agendamento/Job
+## Scheduling / Job
 
-- Periodicidade : Diária;
-- Hora          : 06H00;
-- Job           : /home/userssh/JobBackupMediaWikiSRC.sh
-- Local         : root@10.81.1.221
+- Frequency: Daily;
+- Time: 06H00;
+- Job: /home/userssh/JobBackupMediaWikiSRC.sh
+- Location: root@10.81.1.221
 
-## Origem do backup
+## Source of backup
 
-- End IP Aplicacao: 192.168.105.172
-- End IP Banco    : 192.168.105.173
-- Dir Aplicação   : /usr/local/mediawiki-1.23.5
-- DBName          : WIKI
-- DBUser          : mediawiki
+- End IP Application: 192.168.105.172
+- End IP Bank: 192.168.105.173
+- Dir Application: /usr/local/mediawiki-1.23.5
+- DBName: WIKI
+- DBUser: mediawiki
 
-## Destino
+## Destiny
 
-- End IP Destino    : 10.81.1.221 (infraestrutura remota)
-- Dir Destino Backup: /var/backups/MediaWikiSRC
+- End IP Destination: 10.81.1.221 (remote infrastructure)
+- Dir Destination Backup: / var / backups / MediaWikiSRC
